@@ -1,0 +1,8 @@
+<!-- {{movieListarr | json}} -->
+<div class="container">
+<div *ngFor="let movie of Movies.results">
+    <!-- <div>{{movie.poster_path}}</div> -->
+
+    <!-- <div>{{movie.original_title}}</div> -->
+   <div><img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}"></div>
+</div>

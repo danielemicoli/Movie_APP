@@ -1,0 +1,35 @@
+nav{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    
+}
+span{
+    color: rgb(0,212,255);
+    font-size: 30px;
+    font-weight: 600;
+    
+    /* color: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(113,205,210,1) 0%, rgba(116,185,194,1) 40%, rgba(72,156,223,1) 85%);; */
+}
+.navbar { 
+    background-color: #132747 !important; 
+    
+}
+.nav-link{
+    color: white!important;
+}
+.longlogo{
+    height: 1em;
+    width: 4em;
+    background-color:rgb(0,212,255) ;
+    border-radius: 35%;
+}
+.avatar{
+    color: #132747;
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+}
+.container-fluid{
+   
+}
