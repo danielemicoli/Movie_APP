@@ -3,8 +3,29 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: rgb(81, 81, 81);
+    border-radius: 1%;
+}
+.btn-group{
+    text-align: center;
+    margin-bottom: 2em;
+    margin-left: 100px;
+    justify-content: center;
+}
+.btn-group{
+    text-align: center;
+}
+html{
+    background-color: black;
 }
 
 .container div{
     flex: 0 1 20%
+}
+.container img{
+    margin: 1em;
+    border-radius: 5%;
+}
+img:hover{
+    opacity:0.4
 }

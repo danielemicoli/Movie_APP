@@ -1,8 +1,27 @@
 <!-- {{movieListarr | json}} -->
+<app-main></app-main>
+
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button [routerLink]="['lastest']" routerLinkActive="router-link-active"  type="button" class="btn btn-outline-light">Latest</button>
+    <button type="button" class="btn btn-outline-light">Middle</button>
+    <button type="button" class="btn btn-outline-light">Right</button>
+  </div>
+
 <div class="container">
-<div *ngFor="let movie of Movies.results">
+<div *ngFor="let item of Movies.results">
     <!-- <div>{{movie.poster_path}}</div> -->
 
     <!-- <div>{{movie.original_title}}</div> -->
-   <div><img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}"></div>
+   <div>
+    <!-- <button (click)="infoMovie(item)" type="button" class="btn btn-dark">Dark</button> -->
+ <a [routerLink]="" (click)="infoMovie(item)" >
+    <img src="https://image.tmdb.org/t/p/w185/{{item.poster_path}}" >
+</a>
 </div>
+</div> 
+<div class="pagination">
+    <div class="page" id="prev">Previous Page</div>
+    <div class="current" id="current">1</div>
+    <div class="page" id="next">Next Page</div>
+</div>  
+

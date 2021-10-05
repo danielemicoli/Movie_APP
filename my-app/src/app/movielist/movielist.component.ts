@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { Movie } from '../interfaces/movie';
 import { MovielistService } from '../services/movielist.service';
 
@@ -9,10 +9,16 @@ import { MovielistService } from '../services/movielist.service';
   styleUrls: ['./movielist.component.css']
 })
 export class MovielistComponent implements OnInit {
+  
+  
+  
+  
   IMG_URL = 'https://image.tmdb.org/t/p/w185/';
   Movies:any;
   idPoster:any;
-  constructor(private movieList:MovielistService) { }
+  moviedet!:any;
+  constructor(private movieList:MovielistService,
+    private router:Router) { }
   
 
   ngOnInit(): void {
@@ -20,9 +26,14 @@ export class MovielistComponent implements OnInit {
       this.Movies = resp;
       
 
-      
-
   })}
+
+infoMovie(item:any){
+  this.movieList.getMovieInfo(item.id)
+  .subscribe(resp => this.Movies = resp)
+    this.router.navigate(['home', item.id,'info'])
+}
+
 
 
   // getMovieCode():void{
